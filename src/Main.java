@@ -11,6 +11,11 @@ public class Main {
 
 
         //2) create an input file of Vehicles,Cars andTrucks in comma separated values (CSV) format
+//        fileoutputstram
+//                fileprinter printwriter
+//                        "vehicle", tag,
+        FileOutputStream fos = null;
+        File csvFile;
         public void creatingFile() {
             try {
 
