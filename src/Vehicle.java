@@ -35,6 +35,30 @@ public class Vehicle {
     public void setVtag(String newTag) {
         this.Vtag = newTag;
     }
+    //vin getter
+    public String getVvin() {
+        return Vvin;
+    }
+    //vin setter
+    public void setVvin(String newVin) {
+        this.Vvin = newVin;
+    }
+    //purchase price getter
+    public double getPrice() {
+        return Vpurchaseprice;
+    }
+    //purchase price setter
+    public void setVpurchaseprice(double newPurchasePrice) {
+        this.Vpurchaseprice = newPurchasePrice;
+    }
+    //purchase year getter
+    public int getPurchaseYear() {
+        return Vpurchaseyear;
+    }
+    //purchase year setter
+    public void setVpurchaseyear(int newPurchaseYear) {
+        this.Vpurchaseyear = newPurchaseYear;
+    }
      //2.1) getTax should compute the basic vehicle tax based on purchase price
     public double getTax() {
         double tax = 0.0;
@@ -46,10 +70,12 @@ public class Vehicle {
     }
 
     //3) override toString method to print the vehicle info
-//print method
+
+    //print method
     @Override
     public String toString() {
 
-        return("The vehicle's tag is " + Vtag + " and the tax on the vehicle is " + tax);
+        return("The vehicle's tag is " + Vtag + ", its vin is " + Vvin + " and the tax on the vehicle is " + tax + "based on " +
+                "the fact that the vehicle was bought in " + Vpurchaseyear);
     }
 }
