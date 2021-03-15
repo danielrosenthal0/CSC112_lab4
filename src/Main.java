@@ -20,6 +20,7 @@ public class Main {
             csvFile.createNewFile();
             PrintWriter writer = new PrintWriter(csvFile);
             writer.println("Car, bmt147, lkjlkjlklj12231231lkjl, 15173.17, 2005, pinto, true, 4");
+            writer.println("Vehicle, xrc761, oojojjpjp09809, 3500.00, 2015");
             writer.println("Truck, abc698, iuyj08-9j, 35165.88, 2019, 4");
             writer.close();
         } catch (IOException e) {
@@ -37,23 +38,24 @@ public class Main {
 
         while (reader.hasNextLine()) {
             lines = reader.nextLine().split(",");
-            if (lines[0] == "vehicle") {
+            if (lines[0] == "Vehicle") {
                 inventory.add(new Vehicle(lines[1], lines[2], Double.parseDouble(lines[3]),
                         Integer.parseInt(lines[4])));
-            } else if (lines[0] == "car") {
-                inventory.add(new Car(lines[1]), lines[2], Double.parseDouble(lines[3]),
+            } else if (lines[0] == "Car") {
+                inventory.add(new Car(lines[1], lines[2], Double.parseDouble(lines[3]),
                         Integer.parseInt(lines[4]), lines[5], Boolean.parseBoolean(lines[6]),
-                        Integer.parseInt(lines[7]));
-            }
+                        Integer.parseInt(lines[7])));
+            } else if (lines[0] == "Truck") {
+
 
             }
             reader.close();
 
-            //testing inventory
-            int size = inventory.size();
-            for (int i = 0; i < size; i++) {
-                System.out.println(inventory.get(i));
-            }
+//            //testing inventory
+//            int size = inventory.size();
+//            for (int i = 0; i < size; i++) {
+//                System.out.println(inventory.get(i));
+//            }
 //        inventory.add(new Car("bmt147", "lkjlkjlklj12231231lkjl", 15173.17, 2005,
 //                "pinto", true, 4));
 //        inventory.add(new Vehicle("xrc761","oojojjpjp09809",3500.00, 2015));
@@ -61,6 +63,11 @@ public class Main {
 
 
             //4) for each vehicle in the inventory print the tag and the tax
+
+            int size = inventory.size();
+            for (int i = 0; i < size; i++) {
+                System.out.println(inventory.get(i));
+            }
 
 
         }

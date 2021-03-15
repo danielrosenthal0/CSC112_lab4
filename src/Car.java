@@ -20,14 +20,32 @@ public class Car extends Vehicle {
         this.Cnumdoors = Cnumdoors;
 
         // 1.1)ccall Vehicle constructor
-        //is this right?
+
 
     }
 
     //2) override Vehicle method getType, getTax
+    //getType??
+    public double getTax() {
+        double tax = 0.0;
+        tax = ((0.055*Vpurchaseprice)*(2021-Vpurchaseyear)) + 17.45;
+        if (Cwindowtint = true) {
+            tax = tax + 15;
+        }
+        if (Cnumdoors > 2) {
+            tax = tax + 4.73*Cnumdoors;
+        }
+        return tax;
+    }
     //2.1) getTax should compute the tax for Car as described in the project description
     //3) override toString method
-    public String toString(){
-        return "Car:  "+super.Vtag;
+    @Override
+    public String toString() {
+
+        return("The vehicle's tag is " + Vtag + ", its vin is " + Vvin + " and the tax on the vehicle is " + tax + "based on " +
+                "the fact that the vehicle was bought in " + Vpurchaseyear);
     }
+//    public String toString(){
+//        return "Car:  "+super.Vtag;
+//    }
 }

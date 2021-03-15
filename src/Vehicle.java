@@ -14,7 +14,7 @@ public class Vehicle {
     protected String Vvin;
     protected double Vpurchaseprice;
     protected int  Vpurchaseyear;
-    private double tax;
+    protected double tax;
 
     //1) create Vehicle constructor
     public Vehicle() {
