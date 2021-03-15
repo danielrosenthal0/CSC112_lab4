@@ -24,6 +24,12 @@ public class Vehicle {
         int Vpurchaseyear;
         double tax;
     }
+    public Vehicle (String tag, String vin, double pprice, int pyear) {
+        this.Vtag = tag;
+        this.Vvin = vin;
+        this.Vpurchaseprice = pprice;
+        this.Vpurchaseyear = pyear;
+    }
 
 
     //2) create getters and setters for the data memebers get tag
