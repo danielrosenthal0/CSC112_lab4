@@ -30,10 +30,10 @@ public class Car extends Vehicle {
         double tax = 0.0;
         tax = ((0.055*Vpurchaseprice)*(2021-Vpurchaseyear)) + 17.45;
         if (Cwindowtint = true) {
-            tax = tax + 15;
+            tax = Math.round(tax + 15);
         }
         if (Cnumdoors > 2) {
-            tax = tax + 4.73*Cnumdoors;
+            tax = Math.round(tax + 4.73*Cnumdoors);
         }
         return tax;
     }
@@ -42,8 +42,11 @@ public class Car extends Vehicle {
     @Override
     public String toString() {
 
-        return("The vehicle's tag is " + Vtag + ", its vin is " + Vvin + " and the tax on the vehicle is " + tax + "based on " +
-                "the fact that the vehicle was bought in " + Vpurchaseyear);
+        return("The car's tag is " + Vtag + ", its vin is " + Vvin + " and the tax on the car is $"
+                + getTax() + " based on the fact that the vehicle was bought in " + Vpurchaseyear +
+                ", whether or not the car has tinted windows, and because the car has " +
+                Cnumdoors + " doors.");
+
     }
 //    public String toString(){
 //        return "Car:  "+super.Vtag;

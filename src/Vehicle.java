@@ -68,8 +68,11 @@ public class Vehicle {
      //2.1) getTax should compute the basic vehicle tax based on purchase price
     public double getTax() {
         double tax = 0.0;
-        tax = (0.055*Vpurchaseprice)*(2021-Vpurchaseyear);
+        //not sure how to call purchase price
+        //tax = Vpurchaseprice;
+        tax = Math.round((0.055 * Vpurchaseprice)*(2021 - Vpurchaseyear));
         return tax;
+
     }
     public void setTax(double newTax) {
         this.tax = newTax;
@@ -81,8 +84,8 @@ public class Vehicle {
     @Override
     public String toString() {
 
-        return("The vehicle's tag is " + Vtag + ", its vin is " + Vvin + " and the tax on the vehicle is "
-                + tax + " based on " +
-                "the fact that the vehicle was bought in " + Vpurchaseyear);
+        return("The vehicle's tag is " + Vtag + ", its vin is " + Vvin + " and the tax on the vehicle is $"
+                + getTax() + " based on " +
+                "the fact that the vehicle was bought in " + Vpurchaseyear + ".");
     }
 }
