@@ -81,7 +81,8 @@ public class Vehicle {
     @Override
     public String toString() {
 
-        return("The vehicle's tag is " + Vtag + ", its vin is " + Vvin + " and the tax on the vehicle is " + tax + "based on " +
+        return("The vehicle's tag is " + Vtag + ", its vin is " + Vvin + " and the tax on the vehicle is "
+                + tax + " based on " +
                 "the fact that the vehicle was bought in " + Vpurchaseyear);
     }
 }
