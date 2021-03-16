@@ -68,9 +68,10 @@ public class Vehicle {
      //2.1) getTax should compute the basic vehicle tax based on purchase price
     public double getTax() {
         double tax = 0.0;
-        //not sure how to call purchase price
         //tax = Vpurchaseprice;
-        tax = Math.round((0.055 * Vpurchaseprice)*(2021 - Vpurchaseyear));
+        tax = (0.055 * Vpurchaseprice)*(2021 - Vpurchaseyear);
+        //not sure how to round
+        tax = Math.round(tax * 100.0) / 100.0;
         return tax;
 
     }
