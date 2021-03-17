@@ -35,43 +35,63 @@ public class Vehicle {
     //2) create getters and setters for the data memebers get tag
     //tag getter
     public String getVtag() {
+
         return Vtag;
     }
     //tag setter
     public void setVtag(String newTag) {
+
         this.Vtag = newTag;
     }
     //vin getter
     public String getVvin() {
+
         return Vvin;
     }
     //vin setter
     public void setVvin(String newVin) {
+
         this.Vvin = newVin;
     }
     //purchase price getter
     public double getPrice() {
+
         return Vpurchaseprice;
     }
     //purchase price setter
     public void setVpurchaseprice(double newPurchasePrice) {
+
         this.Vpurchaseprice = newPurchasePrice;
     }
     //purchase year getter
     public int getPurchaseYear() {
+
         return Vpurchaseyear;
     }
     //purchase year setter
     public void setVpurchaseyear(int newPurchaseYear) {
+
         this.Vpurchaseyear = newPurchaseYear;
     }
      //2.1) getTax should compute the basic vehicle tax based on purchase price
     public double getTax() {
         double tax = 0.0;
+        double years = 0.0;
         //tax = Vpurchaseprice;
-        tax = (0.055 * Vpurchaseprice)*(2021 - Vpurchaseyear);
+//        if ((2021 - getPurchaseYear()) < 10) {
+//            //tax = (0.055 * getPrice()) * (1 -((2021 - getPurchaseYear()) / 10));
+//            tax = (1 - ((2021 - getPurchaseYear()) / 10));
+//        }
+//        } else {
+//            tax = (0.055 * getPrice());
+//        }
         //not sure how to round
-        tax = Math.round(tax * 100.0) / 100.0;
+        //tax = Math.round(tax * 100.0) / 100.0;
+        years = 2021 - getPurchaseYear();
+        years = years / 10;
+        years = 1 - years;
+        tax = (0.055 * getPrice());
+        tax = tax * years;
         return tax;
 
     }

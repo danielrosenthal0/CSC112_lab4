@@ -43,8 +43,8 @@ public class Car extends Vehicle {
     public String toString() {
 
         return("The car's tag is " + Vtag + ", its vin is " + Vvin + " and the tax on the car is $"
-                + getTax() + " based on the fact that the vehicle was bought in " + Vpurchaseyear +
-                ", whether or not the car has tinted windows, and because the car has " +
+                + getTax() + " because the vehicle was bought in " + Vpurchaseyear +
+                " for $" + Vpurchaseprice + " and because the car has " +
                 Cnumdoors + " doors.");
 
     }

@@ -21,7 +21,9 @@ public class Main {
             csvFile.createNewFile();
             PrintWriter writer = new PrintWriter(csvFile);
             writer.println("Car,bmt147,lkjlkjlklj12231231lkjl,15173.17,2005,pinto,true,4");
+            writer.println("Vehicle,xrc761,oojojjpjp09809,3500.00,2019");
             writer.println("Vehicle,xrc761,oojojjpjp09809,3500.00,2015");
+            writer.println("Vehicle,xrc761,oojojjpjp09809,3500.00,2008");
             writer.println("Truck,abc698,iuyj08-9j,35165.88,2019,4");
             //System.out.println("1");
             writer.close();
