@@ -48,6 +48,10 @@ public class Vehicle {
 
         this.Vtag = newTag;
     }
+
+    //I included getters and setters for the rest of the variables but they were never used
+
+
 //    //vin getter
 //    public String getVvin() {
 //
@@ -85,15 +89,18 @@ public class Vehicle {
     //type setter
     public void setType(String newType) {
         this.type = newType;
-
     }
+
+    //tag getter
     public String getTag() {
         return Vtag;
     }
+    //tag setter
     public void setTag(String newTag) {
         this.tag = newTag;
     }
      //2.1) getTax should compute the basic vehicle tax based on purchase price
+    //if statement determines what type of tax to calculate
     public double getTax() {
         double tax = 0.0;
         double years = 0.0;
@@ -101,6 +108,8 @@ public class Vehicle {
             tax = Vpurchaseprice*0.055;
             return tax;
         } else {
+            //not totally sure if tax is calculated right b/c instructions were confusing but
+            //gets the age of car and converts to decimal, multiplies by tax and adds it back onto tax
             years = 2021 - Vpurchaseyear;
             years = years / 10;
             years = 1 - years;
@@ -110,13 +119,10 @@ public class Vehicle {
         }
 
     }
-    public void setTax(double newTax) {
-        this.tax = newTax;
-    }
 
     //3) override toString method to print the vehicle info
 
-    //print method
+    //print method that isn't used
     @Override
     public String toString() {
 

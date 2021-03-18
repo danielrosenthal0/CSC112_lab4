@@ -13,6 +13,8 @@ public class Truck extends Vehicle {
     public String getType() {
         return "Truck";
     }
+
+    //overrides vehicle get tax, checks weight and adds road fee
     public double getTax() {
         tax = super.getTax();
 
@@ -21,12 +23,13 @@ public class Truck extends Vehicle {
 
         }
         tax = tax + 50.75;
-        tax = (double)Math.round(tax * 1000) /1000;
         return tax;
     }
 
 
    //3) override toString
+
+    //another print statement that isn't used
    @Override
    public String toString() {
 

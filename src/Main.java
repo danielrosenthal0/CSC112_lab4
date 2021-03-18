@@ -16,7 +16,7 @@ public class Main {
 
         //2) create an input file of Vehicles,Cars andTrucks in comma separated values (CSV) format
 
-
+        //fileoutputstream to create new file, add 20 lines
         FileOutputStream fos = null;
         File csvFile = new File("src/inventory.csv");
         try {
@@ -30,12 +30,15 @@ public class Main {
             writer.println("Car,xyz333,hfjdsfhjasfd,20000000.55,2020,blue,false,2");
 
             writer.close();
+            //catch in case something goes wrong
         } catch (IOException e) {
             System.exit(1);
 
         }
 
         //3) put vehicles in the inventory (read from a file and add), the followin lines are examples
+
+        //fileinoutstream to read from new csv file
         FileInputStream fis = null;
         try {
             fis = new FileInputStream("src/inventory.csv");
@@ -46,6 +49,8 @@ public class Main {
         }
         Scanner reader = new Scanner(fis);
 
+        //scanner reads each line, splits at commas, checks first index and sorts accordingly
+        //parses doubles and integers when needed
         while (reader.hasNextLine()) {
             lines = reader.nextLine().split(",");
 
@@ -62,14 +67,13 @@ public class Main {
                 inventory.add(new Truck(lines[1], lines[2], Double.parseDouble(lines[3]),
                         Integer.parseInt(lines[4]), Integer.parseInt(lines[5])));
 
-            } else {
-
             }
         }
         reader.close();
 
 
         //4) for each vehicle in the inventory print the tag and the tax
+//original print statement for overrides that isn't used
 
 //        int size = inventory.size();
 //        for (int i = 0; i < size; i++) {

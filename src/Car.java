@@ -29,6 +29,7 @@ public class Car extends Vehicle {
         return "Car";
     }
 
+    //overrides vehicle tax, checks window tint and num of doors on top of normal vehicle tax
     public double getTax() {
         tax = super.getTax();
         if (Cwindowtint = true) {
@@ -43,6 +44,8 @@ public class Car extends Vehicle {
     }
     //2.1) getTax should compute the tax for Car as described in the project description
     //3) override toString method
+
+    //another print statement that isn't used
     @Override
     public String toString() {
 
