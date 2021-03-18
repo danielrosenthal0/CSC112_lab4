@@ -26,16 +26,16 @@ public class Car extends Vehicle {
 
     //2) override Vehicle method getType, getTax
     //getType??
+
     public double getTax() {
-        double tax = 0.0;
-        tax = ((0.055*Vpurchaseprice)*(2021-Vpurchaseyear)) + 17.45;
+        tax = super.getTax();
         if (Cwindowtint = true) {
             tax = Math.round(tax + 15);
         }
         if (Cnumdoors > 2) {
             tax = Math.round(tax + 4.73*Cnumdoors);
         }
-        return tax;
+        return tax + 17.45;
     }
     //2.1) getTax should compute the tax for Car as described in the project description
     //3) override toString method
@@ -44,11 +44,8 @@ public class Car extends Vehicle {
 
         return("The car's tag is " + Vtag + ", its vin is " + Vvin + " and the tax on the car is $"
                 + getTax() + " because the vehicle was bought in " + Vpurchaseyear +
-                " for $" + Vpurchaseprice + " and because the car has " +
+                " for $" + Vpurchaseprice + "  because the car has " +
                 Cnumdoors + " doors.");
 
     }
-//    public String toString(){
-//        return "Car:  "+super.Vtag;
-//    }
 }

@@ -77,22 +77,17 @@ public class Vehicle {
     public double getTax() {
         double tax = 0.0;
         double years = 0.0;
-        //tax = Vpurchaseprice;
-//        if ((2021 - getPurchaseYear()) < 10) {
-//            //tax = (0.055 * getPrice()) * (1 -((2021 - getPurchaseYear()) / 10));
-//            tax = (1 - ((2021 - getPurchaseYear()) / 10));
-//        }
-//        } else {
-//            tax = (0.055 * getPrice());
-//        }
-        //not sure how to round
-        //tax = Math.round(tax * 100.0) / 100.0;
-        years = 2021 - getPurchaseYear();
-        years = years / 10;
-        years = 1 - years;
-        tax = (0.055 * getPrice());
-        tax = tax * years;
-        return tax;
+        if (2021 - Vpurchaseyear > 10) {
+            tax = Vpurchaseprice*0.055;
+            return tax;
+        } else {
+            years = 2021 - Vpurchaseyear;
+            years = years / 10;
+            years = 1 - years;
+            tax = (0.055 * Vpurchaseprice);
+            tax = tax + tax*years;
+            return tax;
+        }
 
     }
     public void setTax(double newTax) {
@@ -106,7 +101,6 @@ public class Vehicle {
     public String toString() {
 
         return("The vehicle's tag is " + Vtag + ", its vin is " + Vvin + " and the tax on the vehicle is $"
-                + getTax() + " based on " +
-                "the fact that the vehicle was bought in " + Vpurchaseyear + ".");
+                + getTax() + " because the vehicle was bought in " + Vpurchaseyear + ".");
     }
 }
