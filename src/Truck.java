@@ -10,13 +10,19 @@ public class Truck extends Vehicle {
         this.Tweight = Tweight;
     }
     //2) override getType and getTax to compute tax for Truck as described in the project description
+    public String getType() {
+        return "Truck";
+    }
     public double getTax() {
         tax = super.getTax();
 
         if (Tweight > 2) {
             tax = Math.round(tax + (Tweight) * 100);
 
-        } return tax + 50.75;
+        }
+        tax = tax + 50.75;
+        tax = (double)Math.round(tax * 1000) /1000;
+        return tax;
     }
 
 

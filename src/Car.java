@@ -25,7 +25,9 @@ public class Car extends Vehicle {
     }
 
     //2) override Vehicle method getType, getTax
-    //getType??
+    public String getType() {
+        return "Car";
+    }
 
     public double getTax() {
         tax = super.getTax();
@@ -35,7 +37,9 @@ public class Car extends Vehicle {
         if (Cnumdoors > 2) {
             tax = Math.round(tax + 4.73*Cnumdoors);
         }
-        return tax + 17.45;
+        tax = tax + 17.45;
+        tax = (double)Math.round(tax * 1000) /1000;
+        return tax;
     }
     //2.1) getTax should compute the tax for Car as described in the project description
     //3) override toString method

@@ -4,9 +4,10 @@
 // March 2021
 
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 public class Vehicle {
-
-
 
     public static enum Venum  {car, truck, motorcycle, moped};
 
@@ -15,6 +16,8 @@ public class Vehicle {
     protected double Vpurchaseprice;
     protected int  Vpurchaseyear;
     protected double tax;
+    protected String type;
+    protected String tag;
 
     //1) create Vehicle constructor
     public Vehicle() {
@@ -23,6 +26,8 @@ public class Vehicle {
         double Vpurchaseprice;
         int Vpurchaseyear;
         double tax;
+        String type;
+        String tag;
     }
     public Vehicle (String tag, String vin, double pprice, int pyear) {
         this.Vtag = tag;
@@ -43,35 +48,50 @@ public class Vehicle {
 
         this.Vtag = newTag;
     }
-    //vin getter
-    public String getVvin() {
-
-        return Vvin;
+//    //vin getter
+//    public String getVvin() {
+//
+//        return Vvin;
+//    }
+//    //vin setter
+//    public void setVvin(String newVin) {
+//
+//        this.Vvin = newVin;
+//    }
+//    //purchase price getter
+//    public double getPrice() {
+//
+//        return Vpurchaseprice;
+//    }
+//    //purchase price setter
+//    public void setVpurchaseprice(double newPurchasePrice) {
+//
+//        this.Vpurchaseprice = newPurchasePrice;
+//    }
+//    //purchase year getter
+//    public int getPurchaseYear() {
+//
+//        return Vpurchaseyear;
+//    }
+//    //purchase year setter
+//    public void setVpurchaseyear(int newPurchaseYear) {
+//
+//        this.Vpurchaseyear = newPurchaseYear;
+//    }
+    //type getter
+    public String getType() {
+        return "Vehicle";
     }
-    //vin setter
-    public void setVvin(String newVin) {
+    //type setter
+    public void setType(String newType) {
+        this.type = newType;
 
-        this.Vvin = newVin;
     }
-    //purchase price getter
-    public double getPrice() {
-
-        return Vpurchaseprice;
+    public String getTag() {
+        return Vtag;
     }
-    //purchase price setter
-    public void setVpurchaseprice(double newPurchasePrice) {
-
-        this.Vpurchaseprice = newPurchasePrice;
-    }
-    //purchase year getter
-    public int getPurchaseYear() {
-
-        return Vpurchaseyear;
-    }
-    //purchase year setter
-    public void setVpurchaseyear(int newPurchaseYear) {
-
-        this.Vpurchaseyear = newPurchaseYear;
+    public void setTag(String newTag) {
+        this.tag = newTag;
     }
      //2.1) getTax should compute the basic vehicle tax based on purchase price
     public double getTax() {
