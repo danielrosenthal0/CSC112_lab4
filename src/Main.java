@@ -28,6 +28,21 @@ public class Main {
             writer.println("Vehicle,xrc761,oojojjpjp09809,3500.00,2008");
             writer.println("Truck,abc698,iuyj08-9j,35165.88,2019,4");
             writer.println("Car,xyz333,hfjdsfhjasfd,20000000.55,2020,blue,false,2");
+            writer.println("Truck,agds698,kasjf732,22445,2014,8");
+            writer.println("Truck,fjs987,ikjasadfl,198853.32,2007,4");
+            writer.println("Vehicle,kfu1295,kdkasdnvnbjb48,877463,2010");
+            writer.println("Vehicle,oud857,abcombloper239,8473432,2018");
+            writer.println("Car,slf834,gjskfgjdgfjerwg588,76544.17,2000,yellow,true,4");
+            writer.println("Vehicle,awq120,8584gfdgdfg84,9985.00,2019");
+            writer.println("Vehicle,mbi853,sdfsdgtre884,12833.00,2020");
+            writer.println("Vehicle,lfe321,iisfsrewrt123,662399.00,2012");
+            writer.println("Truck,mbfd32,0984fd-9j,40000.88,2019,3");
+            writer.println("Car,yfe223,asdeiwfji009984,30555.55,2006,blue,true,4");
+            writer.println("Truck,ghr875,asdfiosle2399,18000,2014,6");
+            writer.println("Truck,mka998,ncasdaf9457,15933.32,2018,4");
+            writer.println("Vehicle,ods433,fjdsvmvaf8743,400000,2015");
+            writer.println("Vehicle,yude72,admaksfmkds1,20544,2017");
+
 
             writer.close();
             //catch in case something goes wrong

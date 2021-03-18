@@ -105,7 +105,11 @@ public class Vehicle {
         double tax = 0.0;
         double years = 0.0;
         if (2021 - Vpurchaseyear > 10) {
-            tax = Vpurchaseprice*0.055;
+            tax = Vpurchaseprice * 0.055;
+            return tax;
+        } else if (2021 - Vpurchaseyear == 0) {
+            tax = Vpurchaseprice * 0.055;
+            tax = tax*2;
             return tax;
         } else {
             //not totally sure if tax is calculated right b/c instructions were confusing but
